@@ -4,17 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta og:titles="">
     <title>OGI Website</title>
+
+    <!-- Primary Meta Tags -->
+    <meta name="description" content="A posuere scelerisque gravida facilisi parturient magna urna donec parturient
+        per augue a
+        amet quam nullam a ad a" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content=" https://ogiwebsite.netlify.app/" />
+    <meta property="og:title" content="An animated Website for your Agency!" />
+    <meta property="og:description" content="A posuere scelerisque gravida facilisi parturient magna urna donec parturient
+        per augue a
+        amet quam nullam a ad a" />
+    <meta property="og:image"
+        content="https://boldist.co/wp-content/uploads/2020/11/Laughing-Samurai-Pros-and-Cons-of-Using-Animations-in-Your-Web-Design-scaled.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="An animated Website" />
+    <meta property="twitter:url" content="https://ogiwebsite.netlify.app/" />
+    <meta property="twitter:title" content="An animated Website for your Agency!" />
+    <meta property="twitter:description" content="A posuere scelerisque gravida facilisi parturient magna urna donec parturient
+        per augue a
+        amet quam nullam a ad a" />
+    <meta property="twitter:image"
+        content="https://boldist.co/wp-content/uploads/2020/11/Laughing-Samurai-Pros-and-Cons-of-Using-Animations-in-Your-Web-Design-scaled.jpg" />
+
+    <!-- Meta Tags Generated with https://metatags.io -->
 <script defer src="js/main.js"></script><link href="css/style.css" rel="stylesheet"></head>
 
 <body>
-    <header class="navigation">
+    <header class="header">
         <div class="container">
             <div class="brand">
                 <a href="javascript:void(0)" class="brand_logo txt-lg">Company Name</a>
                 <nav class="nav_main">
                     <button class="burger_menu"><span class="burger_menu-lines"></span></button>
-                    <ul class="nav_main-list nav-desk">
+                    <ul class="nav_main-list desktop-d-none">
                         <li class="nav_main-list--items"><a href="javascript:void(0)" class="nav-links">Home</a></li>
                         <li class="nav_main-list--items"><a href="javascript:void(0)" class="nav-links">About Us</a>
                         </li>
@@ -27,7 +55,7 @@
                         </li>
                     </ul>
 
-                    <div class="mob_nav none">
+                    <div class="mob_nav mobile-d-none">
                         <ul class="nav_main-list--mobile">
                             <li class="nav_main-list--items"><a href="javascript:void(0)" class="nav-links">Home</a>
                             </li>
@@ -59,7 +87,7 @@
             </div>
         </section>
 
-        <section class="about bc_primary">
+        <section class="about bc-primary">
             <div class="container">
                 <div class="content">
                     <h2 class="about_head heading-sm-secondary heading">About Us</h2>
@@ -74,13 +102,15 @@
                         dapibus platea turpis augue mi proin lorem morbi sapien facilisis lectus.</p>
                 </div>
             </div>
-            <img data-src="./images/about.jpg" data-srcset="./images/about.jpg 1x,
+            <picture>
+                <img data-src="./images/about.jpg" data-srcset="./images/about.jpg 1x,
                     ./images/about@2x.jpg 2x,
                     ./images/about@3x.jpg 3x" class="img" alt="about-us-image" />
+            </picture>
 
         </section>
 
-        <section class="timeline bc_secondary">
+        <section class="timeline bc-secondary">
             <div class="container timeline_container">
                 <div class="timeline_left">
                     <div class="progress">
@@ -204,13 +234,16 @@
         </section>
 
 
-        <section class="services bc_tertiary">
+        <section class="services bc-tertiary">
             <div class="container">
-                <h2 class="heading-sm-primary services_head">Our Services</h2>
+                <h2 class="heading-sm-primary services_head text-center text-sm-start">Our Services</h2>
                 <ul class="services_wrapper">
                     <li class="services_list">
-                        <img data-src="./images/wallet.svg" alt="Wallet" width="40" height="40"
-                            class="services_list-img">
+                        <!-- <img data-src="./images/wallet.svg" alt="Wallet" width="40" height="40"
+                            class="services_list-img"> -->
+                        <svg class="icon lazy-svg services_list-img">
+                            <use href="images/sprites.svg#wallet" data-href="images/sprites.svg"></use>
+                        </svg>
                         <h3 class="txt-lg services_list-head">Consectetur vestibulum</h3>
                         <p class="txt-sm-grey services_list-text">Consectetur vestibulum maecenas curabitur
                             hac
@@ -220,7 +253,13 @@
                             suspendisse a ad lacus mauris</p>
                     </li>
                     <li class="services_list">
-                        <img data-src="./images/smile.svg" alt="smile" width="40" height="40" class="services_list-img">
+                        <!-- <img data-src="./images/smile.svg" alt="smile" width="40" height="40" class="services_list-img"> -->
+                        <!-- <svg class="icon" id="smile">
+                            <use data-href="images/sprites.svg#smile" class="hello"></use>
+                        </svg> -->
+                        <svg class="icon lazy-svg services_list-img">
+                            <use href="images/sprites.svg#smile" data-href="images/sprites.svg"></use>
+                        </svg>
                         <h3 class="txt-lg services_list-head">Consectetur vestibulum</h3>
                         <p class="txt-sm-grey services_list-text">Consectetur vestibulum maecenas curabitur
                             hac
@@ -230,8 +269,11 @@
                             suspendisse a ad lacus mauris</p>
                     </li>
                     <li class="services_list">
-                        <img data-src="./images/hearth.svg" alt="hearth" width="40" height="40"
-                            class="services_list-img">
+                        <!-- <img data-src="./images/hearth.svg" alt="hearth" width="40" height="40"
+                            class="services_list-img"> -->
+                        <svg class="icon lazy-svg services_list-img">
+                            <use href="images/sprites.svg#hearth" data-href="images/sprites.svg"></use>
+                        </svg>
                         <h3 class="txt-lg services_list-head">Consectetur vestibulum</h3>
                         <p class="txt-sm-grey services_list-text">Consectetur vestibulum maecenas curabitur
                             hac
@@ -241,8 +283,11 @@
                             suspendisse a ad lacus mauris</p>
                     </li>
                     <li class="services_list">
-                        <img data-src="./images/rocket.svg" alt="rocket" width="40" height="40"
-                            class="services_list-img">
+                        <!-- <img data-src="./images/rocket.svg" alt="rocket" width="40" height="40"
+                            class="services_list-img"> -->
+                        <svg class="icon lazy-svg services_list-img">
+                            <use href="images/sprites.svg#rocket" data-href="images/sprites.svg"></use>
+                        </svg>
                         <h3 class="txt-lg services_list-head">Consectetur vestibulum</h3>
                         <p class="txt-sm-grey services_list-text">Consectetur vestibulum maecenas curabitur
                             hac
@@ -252,8 +297,11 @@
                             suspendisse a ad lacus mauris</p>
                     </li>
                     <li class="services_list">
-                        <img data-src="./images/joystick.svg" alt="joystick" width="40" height="40"
-                            class="services_list-img">
+                        <!-- <img data-src="./images/joystick.svg" alt="joystick" width="40" height="40"
+                            class="services_list-img"> -->
+                        <svg class="icon lazy-svg services_list-img">
+                            <use href="images/sprites.svg#joystick" data-href="images/sprites.svg"></use>
+                        </svg>
                         <h3 class="txt-lg services_list-head">Consectetur vestibulum</h3>
                         <p class="txt-sm-grey services_list-text">Consectetur vestibulum maecenas curabitur
                             hac
@@ -263,7 +311,10 @@
                             suspendisse a ad lacus mauris</p>
                     </li>
                     <li class="services_list">
-                        <img data-src="./images/phone.svg" alt="phone" width="40" height="40" class="services_list-img">
+                        <!-- <img data-src="./images/phone.svg" alt="phone" width="40" height="40" class="services_list-img"> -->
+                        <svg class="icon lazy-svg services_list-img">
+                            <use href="images/sprites.svg#phone" data-href="images/sprites.svg"></use>
+                        </svg>
                         <h3 class="txt-lg services_list-head">Consectetur vestibulum</h3>
                         <p class="txt-sm-grey services_list-text">Consectetur vestibulum maecenas curabitur
                             hac
@@ -276,11 +327,12 @@
             </div>
         </section>
 
-        <section class="hiring bc_primary">
-            <img data-src="./images/hiring.jpg" data-srcset="./images/hiring.jpg 1x,
+        <section class="hiring bc-primary">
+            <picture>
+                <img data-src="./images/hiring.jpg" data-srcset="./images/hiring.jpg 1x,
             ./images/hiring@2x.jpg 2x,
             ./images/hiring@3x.jpg 3x" class="img hiring_content-img" alt="Hiring-image">
-
+            </picture>
             <div class="container">
                 <div class="hiring_content content ml-auto">
                     <div class="hiring_content-text">
@@ -298,7 +350,7 @@
             </div>
         </section>
 
-        <section class="contact bc_primary">
+        <section class="contact bc-primary">
             <div class="container">
                 <div class="contact_content content">
                     <div class="hiring_content-text">
@@ -306,18 +358,18 @@
                         <form action="javascript:void(0)" class="form">
                             <div class="form-group txt-sm-secondary">
                                 <input class="txt-sm form-input" type="text" required />
-                                <label class="txt-sm form-label">Name</label>
+                                <label class="txt-sm form-label" for="name">Name</label>
                             </div>
                             <div class="form-group txt-sm-secondary">
                                 <input class="txt-sm form-input" type="text" required />
-                                <label class="txt-sm form-label">Email</label>
+                                <label class="txt-sm form-label" for="email">Email</label>
                             </div>
                             <div class="form-group txt-sm-secondary">
                                 <textarea cols="30" rows="10" required class="txt-sm form-textarea"></textarea>
-                                <label class="txt-sm form-label">Message</label>
+                                <label class="txt-sm form-label" for="message">Message</label>
                             </div>
 
-                            <button class="form-btn txt-sm">Contact us</button>
+                            <button class="form-btn txt-sm" aria-label="Contact OGI">Contact us</button>
                         </form>
                     </div>
                 </div>
